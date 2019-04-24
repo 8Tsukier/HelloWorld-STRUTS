@@ -8,13 +8,40 @@
     <form-beans>
         <form-bean name="helloForm"
                    type="info.java.tips.form.HelloForm" />
+
+        <form-bean name="deleteUser"
+                   type="info.java.tips.form.DeleteUserForm" />
+
+        <form-bean name="userList"
+                   type="info.java.tips.form.UserList" />
+
     </form-beans>
 
     <action-mappings>
-        <action path="/hello" type="info.java.tips.action.HelloAction" input="/index.jsp" name="helloForm">
+        <action path="/hello" type="info.java.tips.action.HelloAction" input="/hello.jsp" name="helloForm" scope="request">
             <forward name="success" path="/welcome.jsp" />
             <forward name="failure" path="/fail.jsp" />
         </action>
+
+        <action path="/back" type="info.java.tips.action.Redirect" input="/index.jsp" name="helloForm">
+            <forward name="success" path="/index.jsp" />
+        </action>
+
+        <action path="/addUser" type="info.java.tips.action.Redirect" input="/index.jsp" name="helloForm">
+            <forward name="success" path="/hello.jsp" />
+        </action>
+
+        <action path="/deleting" type="info.java.tips.action.Redirect" input="/index.jsp" name="helloForm">
+            <forward name="success" path="/delForm.jsp" />
+        </action>
+
+        <action path="/deletingUser" type="info.java.tips.action.DeleteUser" input="/delForm.jsp" name="deleteUser">
+            <forward name="success" path="/index.jsp" />
+        </action>
+
+        <action path="/watchList" type="info.java.tips.action.PrintAction" input="/index.jsp" name="userList" scope="session">
+            <forward name="success" path="/list.jsp" />
+        </action>
     </action-mappings>
-    
+
 </struts-config>

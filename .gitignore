@@ -1,0 +1,9 @@
+.idea/
+src/main/webapp/META-INF/context.xml
+target/
+out/
+bin/
+src/main/webapp/META-INF/context.xml
+web/target/
+.project
+.settings/

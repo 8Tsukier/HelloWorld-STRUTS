@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Try3" />
+        <module name="HelloWorld-STRUTS-master" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Try3" target="1.5" />
+      <module name="HelloWorld-STRUTS-master" target="7" />
     </bytecodeTargetLevel>
   </component>
 </project>
