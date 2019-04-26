@@ -1,0 +1,10 @@
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+
+    <definition name="company-template" path="lib/template/common-layout.jsp" template="lib/template/common-layout.jsp">
+        <put name="footer" value="template/footer.jsp" />
+    </definition>
+
+</tiles-definitions>

@@ -1,5 +1,6 @@
 package info.java.tips.action;
 
+import info.java.tips.DBStuff.DBOperations;
 import info.java.tips.form.DeleteUserForm;
 import info.java.tips.form.HelloForm;
 import info.java.tips.form.User;
@@ -20,8 +21,12 @@ public class DeleteUser extends Action {
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
         DeleteUserForm deleteUserForm = (DeleteUserForm) form;
         ActionForward fw = mapping.getInputForward();
+        User userTODelete = new User(deleteUserForm.getName(),"");
 
         if(deleteUserForm.getName()!= null){
+            DBOperations dbOperations = new DBOperations();
+            dbOperations.removeUser(userTODelete);
+
             for(int i = 0; i < UserList.getInstance().getList().size(); i++){
                 User a = (User) UserList.getInstance().getList().get(i);
                 if(a.getName().equalsIgnoreCase(deleteUserForm.getName()))

@@ -6,6 +6,7 @@
 
     <groupId>groupId</groupId>
     <artifactId>Try3</artifactId>
+    <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -17,6 +18,14 @@
                     <target>7</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webXml>web\WEB-INF\web.xml</webXml>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <dependencies>
@@ -26,7 +35,7 @@
             <version>3.1.0</version>
         </dependency>
 
-        <dependency>
+        <dependency>PUBLIC
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>1.4.195</version>
@@ -52,7 +61,15 @@
             <artifactId>struts-taglib</artifactId>
             <version>1.3.10</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts-tiles</artifactId>
+            <version>1.3.10</version>
+        </dependency>
+
     </dependencies>
+
 
 
 </project>

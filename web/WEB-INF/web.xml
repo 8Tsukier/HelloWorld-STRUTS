@@ -28,6 +28,14 @@
             /WEB-INF/struts-logic.tld
         </taglib-location>
     </taglib>
+    <taglib>
+        <taglib-uri>
+            http://struts.apache.org/tags-tiles
+        </taglib-uri>
+        <taglib-location>
+            /WEB-INF/struts-tiles.tld
+        </taglib-location>
+    </taglib>
 </jsp-config>
 
     <servlet>
